@@ -1,0 +1,495 @@
+/* ============================================================
+   Well Next Door – 1:1 Nachbau
+   Rekonstruierte Styles (Original: Webflow)
+   ============================================================ */
+
+/* ---------- Reset / Basis ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #000;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ---------- Wrapper ---------- */
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: static;
+  inset: 0%;
+  overflow: hidden;
+}
+
+/* ---------- Hintergrundvideo ---------- */
+#bgVideoWrap {
+  overflow: hidden;
+  will-change: transform;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  background: #000;
+  isolation: isolate;
+  pointer-events: none;
+  z-index: 0;
+  transform: translateZ(0);
+}
+
+#bgFrame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max(100vw, 177.78vh);
+  height: max(100vh, 56.25vw);
+  min-width: 100%;
+  min-height: 100%;
+  border: 0;
+  pointer-events: none;
+  display: block;
+}
+
+/* ---------- Navigation ---------- */
+.navbar {
+  color: #fff;
+  background-color: transparent;
+  position: fixed;
+  inset: 0% 0% auto;
+  z-index: 1000;
+}
+
+.container {
+  color: #fff;
+  width: 940px;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.nav-menu {
+  color: #fff;
+  display: flex;
+  position: relative;
+}
+
+.link {
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  transition: opacity .2s;
+  display: inline-block;
+}
+
+.link:hover {
+  font-weight: 700;
+  text-decoration: line-through;
+}
+
+.text-span {
+  text-decoration-color: #fff;
+}
+
+/* Hamburger-Button (nur mobil sichtbar) */
+.menu-button {
+  display: none;
+  padding: 18px;
+  margin-left: auto;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.menu-button .nav-icon {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  display: block;
+}
+
+.menu-button .nav-icon::before,
+.menu-button .nav-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+}
+
+.menu-button .nav-icon::before { top: -7px; }
+.menu-button .nav-icon::after { top: 7px; }
+
+/* ---------- Hero (Startseite) ---------- */
+.hero-section {
+  position: fixed;
+  inset: 0%;
+  z-index: 1;
+}
+
+.div-block-2 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+}
+
+.div-block-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Great Vibes", cursive;
+  position: static;
+  z-index: 2147483647;
+}
+
+.heading {
+  color: #fff;
+  letter-spacing: 10px;
+  margin: 0;
+  font-family: "Libertinus Serif", serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 2.7rem;
+  z-index: 2147483647;
+  text-align: center;
+}
+
+/* ---------- Hero (Live-Seite) ---------- */
+.heading-6 {
+  color: #fff;
+  margin: 0 0 4rem;
+  font-family: "Libertinus Serif", serif;
+  font-size: 3rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+.div-block-7 {
+  width: 80vw;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  border-bottom: 1px dashed #fff;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center stretch;
+  padding-bottom: .5rem;
+  display: grid;
+}
+
+.div-block-8 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.div-block-8.second {
+  justify-content: center;
+  align-items: center;
+}
+
+.div-block-8.third {
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0;
+}
+
+.paragraph-2 {
+  color: #fff;
+  margin-bottom: 0;
+  font-family: "Libertinus Serif", serif;
+  font-size: 1rem;
+}
+
+.bold-text {
+  font-weight: 400;
+}
+
+/* ---------- Footer ---------- */
+.footer-dark {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  background-color: transparent;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: stretch stretch;
+  margin: 0;
+  padding: 1rem 2rem;
+  display: grid;
+  position: fixed;
+  inset: auto 0% 0%;
+  z-index: 2147483647;
+}
+
+.footer-divider {
+  background-color: transparent;
+  border-top: 1px solid #fff;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.div-block-5 {
+  grid-column-gap: .3rem;
+  display: flex;
+}
+
+.link-footer {
+  color: #fff;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: .875rem;
+  line-height: 1rem;
+  text-decoration: underline;
+}
+
+.div-block-4 {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  border-top: 1px transparent;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: space-between;
+  place-items: start stretch;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 0;
+  display: grid;
+}
+
+.social-links {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  filter: invert();
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-copyright-center {
+  color: #fff;
+  text-align: center;
+  border-top: 1px solid #fff;
+  padding: 1rem 0;
+  font-family: "Libertinus Serif", serif;
+  font-size: .875rem;
+  line-height: 1rem;
+}
+
+/* ---------- Rechtsseiten (Datenschutz / Nutzungsbedingungen) ---------- */
+.legal-page {
+  min-height: 100vh;
+  background: #000;
+  overflow: visible;
+  height: auto;
+}
+
+.legal-page .footer-dark {
+  position: static;
+  inset: auto;
+}
+
+.div-block-6 {
+  width: 100vw;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem 2rem 0;
+}
+
+.pp-doc,
+.pp-doc-1 {
+  color: #e8e8e8;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 8rem;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: .875rem;
+  line-height: 1.7;
+}
+
+.pp-doc h1,
+.pp-doc-1 h1,
+.heading-2,
+.heading-3 {
+  color: #fff;
+  font-family: "Libertinus Serif", serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.pp-doc h2,
+.pp-doc-1 h2,
+.heading-4,
+.heading-5 {
+  color: #fff;
+  font-family: "Libertinus Serif", serif;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: .75rem;
+}
+
+.pp-doc h3,
+.pp-doc-1 h3 {
+  color: #fff;
+  font-size: 1.05rem;
+  margin-top: 1.75rem;
+  margin-bottom: .5rem;
+}
+
+.pp-doc p,
+.pp-doc-1 p {
+  margin: 0 0 1rem;
+}
+
+.pp-doc ul,
+.pp-doc-1 ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.pp-doc li,
+.pp-doc-1 li {
+  margin-bottom: .4rem;
+}
+
+.pp-doc a,
+.pp-doc-1 a {
+  color: #fff;
+}
+
+.pp-doc hr,
+.pp-doc-1 hr {
+  border: 0;
+  border-top: 1px solid #444;
+  margin: 2.5rem 0 1.5rem;
+}
+
+/* ============================================================
+   Responsive – Webflow-Breakpoints
+   ============================================================ */
+
+/* Tablet / Medium (<= 991px): Menü kollabiert */
+@media screen and (max-width: 991px) {
+  .container {
+    width: 100%;
+    max-width: none;
+    padding: 0 1rem;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    background-color: #000;
+    flex-flow: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .nav-menu.is-open {
+    display: flex;
+  }
+
+  .link {
+    text-align: center;
+  }
+
+  .div-block-7 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Small / Mobile (<= 767px): Footer einspaltig */
+@media screen and (max-width: 767px) {
+  .footer-dark {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    place-items: center stretch;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-divider {
+    margin-top: 60px;
+  }
+
+  .div-block-5 {
+    justify-content: center;
+  }
+
+  .div-block-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    place-items: start stretch;
+  }
+
+  .div-block-8 {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .heading {
+    font-size: 2rem;
+    letter-spacing: 6px;
+  }
+
+  .heading-3,
+  .heading-2 {
+    font-size: 2rem;
+  }
+}
