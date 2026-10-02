@@ -360,7 +360,8 @@ h3 {
 }
 
 .live-page .footer-dark {
-  position: static;
+  position: relative;
+  z-index: 5;
 }
 
 .div-block-8 {
