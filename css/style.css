@@ -216,10 +216,104 @@ h3 {
   display: grid;
 }
 
-/* Vergangener / durchgestrichener Termin */
-.div-block-7.past .paragraph-2 {
+/* ---------- Live Dates – Terminliste ---------- */
+.events-wrap {
+  width: min(760px, 86vw);
+  margin: 0 auto;
+}
+
+.group-label {
+  font-family: "Libertinus Serif", serif;
+  font-size: .8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .45);
+  padding-bottom: .9rem;
+  margin-bottom: .2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, .25);
+}
+
+.events-past {
+  margin-top: 2.75rem;
+}
+
+.event-row {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+.event-date {
+  text-align: center;
+  line-height: 1;
+  color: #fff;
+}
+
+.event-date .ed-day {
+  font-family: "Libertinus Serif", serif;
+  font-size: 2rem;
+  display: block;
+}
+
+.event-date .ed-mon {
+  font-size: .78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .7);
+  display: block;
+  margin-top: .35rem;
+}
+
+.event-date .ed-yr {
+  font-size: .7rem;
+  color: rgba(255, 255, 255, .4);
+  display: block;
+  margin-top: .25rem;
+}
+
+.event-info .ei-name {
+  font-family: "Libertinus Serif", serif;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.event-info .ei-meta {
+  font-size: .9rem;
+  color: rgba(255, 255, 255, .6);
+  margin-top: .3rem;
+}
+
+.event-time {
+  font-family: "Libertinus Serif", serif;
+  font-size: 1rem;
+  color: #fff;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Vergangene Shows: ausgegraut + durchgestrichen */
+.events-past .event-row {
+  opacity: .4;
+}
+
+.events-past .ei-name {
   text-decoration: line-through;
-  opacity: .45;
+}
+
+@media screen and (max-width: 600px) {
+  .event-row {
+    grid-template-columns: 56px 1fr;
+    gap: 1rem;
+  }
+
+  .event-time {
+    grid-column: 2;
+    text-align: left;
+    margin-top: .25rem;
+  }
 }
 
 .div-block-8 {
