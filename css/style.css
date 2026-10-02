@@ -76,6 +76,23 @@ h3 {
   border: 0;
   pointer-events: none;
   display: block;
+  /* Schwarz-Weiß-Look */
+  filter: grayscale(100%) contrast(1.05) brightness(.95);
+}
+
+/* Lese-Layer über dem Video: oben/unten stärker abgedunkelt (Vignette),
+   damit Navigation, Überschrift und Footer immer gut lesbar sind. */
+#bgVideoWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to bottom,
+    rgba(0, 0, 0, .72) 0%,
+    rgba(0, 0, 0, .40) 24%,
+    rgba(0, 0, 0, .40) 66%,
+    rgba(0, 0, 0, .82) 100%);
 }
 
 /* ---------- Navigation ---------- */
