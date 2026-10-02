@@ -316,6 +316,36 @@ h3 {
   }
 }
 
+/* Live-Seite: scrollbar, wenn die Terminliste höher als der Bildschirm ist.
+   Hintergrundvideo bleibt fix, Navi bleibt oben, Inhalt fließt darüber. */
+.live-page .wrapper {
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
+}
+
+.live-page .hero-section {
+  position: relative;
+  inset: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.live-page .div-block-2 {
+  height: auto;
+  width: 100%;
+  padding: 120px 1rem 60px;
+}
+
+.live-page .heading-6 {
+  margin-bottom: 2.25rem;
+}
+
+.live-page .footer-dark {
+  position: static;
+}
+
 .div-block-8 {
   display: flex;
   justify-content: flex-start;
