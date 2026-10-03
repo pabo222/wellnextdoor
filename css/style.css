@@ -76,8 +76,6 @@ h3 {
   border: 0;
   pointer-events: none;
   display: block;
-  /* Schwarz-Weiß-Look */
-  filter: grayscale(100%) contrast(1.05) brightness(.95);
 }
 
 /* Lese-Layer über dem Video: oben/unten stärker abgedunkelt (Vignette),
@@ -89,10 +87,10 @@ h3 {
   z-index: 1;
   pointer-events: none;
   background: linear-gradient(to bottom,
-    rgba(0, 0, 0, .72) 0%,
-    rgba(0, 0, 0, .40) 24%,
-    rgba(0, 0, 0, .40) 66%,
-    rgba(0, 0, 0, .82) 100%);
+    rgba(0, 0, 0, .78) 0%,
+    rgba(0, 0, 0, .52) 22%,
+    rgba(0, 0, 0, .52) 68%,
+    rgba(0, 0, 0, .84) 100%);
 }
 
 /* ---------- Navigation ---------- */
@@ -333,48 +331,36 @@ h3 {
   }
 }
 
-/* Live-Seite: Navigation, Video und Footer bleiben fix –
-   nur die Terminliste (events-wrap) scrollt. */
+/* Live-Seite: die ganze Seite scrollt (Footer NICHT fixed).
+   Hintergrundvideo + Overlay bleiben fix, Navi bleibt oben. */
+.live-page .wrapper {
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
+}
+
 .live-page .hero-section {
+  position: relative;
+  inset: auto;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  /* Platz für die fixe Navi (oben) und den fixen Footer (unten) */
-  padding: 90px 1rem 108px;
 }
 
 .live-page .div-block-2 {
+  height: auto;
   width: 100%;
-  height: 100%;
-  min-height: 0;
-  justify-content: center;
+  padding: 120px 1rem 70px;
 }
 
 .live-page .heading-6 {
-  flex: 0 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
 }
 
-.live-page .events-wrap {
-  flex: 0 1 auto;
-  min-height: 0;
-  overflow-y: auto;
-  padding-right: .6rem;
-}
-
-/* Dezente Scrollbar im Dark-Look */
-.live-page .events-wrap::-webkit-scrollbar {
-  width: 6px;
-}
-
-.live-page .events-wrap::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, .28);
-  border-radius: 3px;
-}
-
-.live-page .events-wrap::-webkit-scrollbar-track {
-  background: transparent;
+/* Footer liegt im Fluss am Seitenende (nicht fixed), aber über dem Video */
+.live-page .footer-dark {
+  position: relative;
+  z-index: 5;
 }
 
 .div-block-8 {
