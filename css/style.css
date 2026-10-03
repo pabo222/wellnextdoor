@@ -309,6 +309,48 @@ h3 {
   text-align: right;
 }
 
+/* Rechte Spalte: Uhrzeit + Kalender-Button */
+.event-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .6rem;
+}
+
+.cal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: .72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 2px;
+  padding: .4rem .7rem;
+  white-space: nowrap;
+  transition: background .2s, color .2s, border-color .2s;
+}
+
+.cal-btn:hover,
+.cal-btn:focus-visible {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.cal-ic {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  flex: 0 0 auto;
+}
+
 /* Vergangene Shows: ausgegraut + durchgestrichen */
 .events-past .event-row {
   opacity: .4;
@@ -324,7 +366,18 @@ h3 {
     gap: 1rem;
   }
 
-  .event-time {
+  /* Uhrzeit + Button unter die Info-Spalte, nebeneinander */
+  .event-cta {
+    grid-column: 2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: .5rem;
+  }
+
+  /* Alleinstehende Uhrzeit (vergangener Termin ohne Button) */
+  .event-row > .event-time {
     grid-column: 2;
     text-align: left;
     margin-top: .25rem;
