@@ -1,0 +1,14 @@
+{
+  "name": "Well Next Door",
+  "short_name": "Well Next Door",
+  "description": "Indie-Pop-Rock-Band aus Bamberg und Nürnberg in Franken.",
+  "lang": "de",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
