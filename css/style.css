@@ -389,7 +389,9 @@ h3 {
 .live-page .wrapper {
   height: auto;
   min-height: 100vh;
-  overflow: visible;
+  width: 100%;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .live-page .hero-section {
