@@ -37,8 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
     remaining++;
-    var dow = row.querySelector('.ed-dow');
-    if (dow && !dow.textContent) dow.textContent = weekday(iso);
+    var dow = row.querySelector('.dt-dow');
+    if (dow && !dow.textContent) {
+      var w = weekday(iso);
+      if (w) dow.textContent = w + ' · ';
+    }
   });
 
   // 2) Keine kommenden Termine -> Hinweis zeigen, Überschrift ausblenden

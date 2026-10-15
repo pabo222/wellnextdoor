@@ -231,9 +231,9 @@ h3 {
   display: grid;
 }
 
-/* ---------- Live Dates – Terminliste ---------- */
+/* ---------- Live Dates – Terminliste (Tour-Stil) ---------- */
 .events-wrap {
-  width: min(720px, 90vw);
+  width: min(720px, 92vw);
   margin: 0 auto;
 }
 
@@ -244,16 +244,16 @@ h3 {
   text-transform: uppercase;
   color: rgba(255, 255, 255, .5);
   padding-bottom: 1rem;
-  margin-bottom: .75rem;
+  margin-bottom: .5rem;
   border-bottom: 1px solid rgba(255, 255, 255, .22);
 }
 
 .event-row {
   display: grid;
-  grid-template-columns: 84px 1fr auto;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  gap: 1.6rem;
-  padding: 1.15rem .6rem;
+  gap: 1.5rem;
+  padding: 1.4rem .7rem;
   border-radius: 6px;
   transition: background .2s;
 }
@@ -268,79 +268,36 @@ h3 {
   }
 }
 
-/* Datums-Box mit Wochentag */
-.event-date {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: .12rem;
-  padding: .55rem .25rem;
-  border: 1px solid rgba(255, 255, 255, .3);
-  border-radius: 4px;
-  line-height: 1;
-  color: #fff;
-}
-
-.ed-dow {
-  font-size: .62rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, .55);
-}
-
-.ed-dow:empty {
-  display: none;
-}
-
-.ed-day {
-  font-family: "Libertinus Serif", serif;
-  font-size: 1.95rem;
-}
-
-.ed-mon {
-  font-size: .68rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, .8);
-}
-
-.ed-yr {
-  font-size: .6rem;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, .4);
-}
-
 .event-info {
   min-width: 0;
 }
 
 .ei-name {
   font-family: "Libertinus Serif", serif;
-  font-size: 1.28rem;
+  font-size: 1.5rem;
   color: #fff;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .ei-meta {
-  font-size: .9rem;
-  color: rgba(255, 255, 255, .6);
-  margin-top: .35rem;
+  font-size: .95rem;
+  color: rgba(255, 255, 255, .62);
+  margin-top: .3rem;
 }
 
-/* Rechte Spalte: Uhrzeit + Kalender-Button */
+/* Datumszeile unter dem Termin */
+.ei-date {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: .76rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .5);
+  margin-top: .7rem;
+}
+
 .event-cta {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: .6rem;
-}
-
-.event-time {
-  font-family: "Libertinus Serif", serif;
-  font-size: 1.05rem;
-  color: #fff;
-  white-space: nowrap;
+  justify-content: flex-end;
 }
 
 .cal-btn {
@@ -356,7 +313,7 @@ h3 {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, .5);
   border-radius: 2px;
-  padding: .4rem .7rem;
+  padding: .45rem .8rem;
   white-space: nowrap;
   transition: background .2s, color .2s, border-color .2s;
 }
@@ -388,23 +345,12 @@ h3 {
 
 @media screen and (max-width: 600px) {
   .event-row {
-    grid-template-columns: 64px 1fr;
     gap: 1rem;
-    padding: 1rem .4rem;
+    padding: 1.2rem .3rem;
   }
 
-  .ed-day {
-    font-size: 1.7rem;
-  }
-
-  /* Uhrzeit + Button unter die Info-Spalte, nebeneinander */
-  .event-cta {
-    grid-column: 2;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1.1rem;
-    margin-top: .55rem;
+  .ei-name {
+    font-size: 1.3rem;
   }
 }
 
