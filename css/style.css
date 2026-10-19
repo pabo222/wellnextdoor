@@ -708,7 +708,6 @@ body.home-photo {
   display: inline-block;
   background: rgba(255, 255, 255, .88);
   padding: .14em .5em .08em;
-  transform: translateY(7vh);
 }
 
 /* Footer: schwarze Schrift, dunkle Trennlinien, schwarze Icons */
