@@ -670,3 +670,51 @@ h3 {
     font-size: 2rem;
   }
 }
+
+/* ============================================================
+   Startseite mit Band-Foto (helles Theme, schwarze Schrift)
+   ============================================================ */
+body.home-photo {
+  background: #f3f2f0;
+}
+
+.home-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  z-index: 0;
+}
+
+/* Navigation schwarz */
+.home-photo .link,
+.home-photo .text-span {
+  color: #111;
+  text-decoration-color: #111;
+}
+
+/* Titel schwarz mit dezenter heller Box, etwas tiefer positioniert */
+.home-photo .heading {
+  color: #111;
+  display: inline-block;
+  background: rgba(255, 255, 255, .55);
+  padding: .14em .5em .08em;
+  transform: translateY(7vh);
+}
+
+/* Footer: schwarze Schrift, dunkle Trennlinien, schwarze Icons */
+.home-photo .link-footer,
+.home-photo .footer-copyright-center {
+  color: #111;
+}
+
+.home-photo .footer-divider,
+.home-photo .footer-copyright-center {
+  border-top-color: rgba(0, 0, 0, .35);
+}
+
+.home-photo .image {
+  filter: none;
+}
