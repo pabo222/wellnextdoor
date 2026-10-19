@@ -80,8 +80,11 @@
 </head>
 <body class="home-photo">
 
-  <!-- Band-Foto als Vollbild-Hintergrund -->
-  <img class="home-bg" src="assets/band.jpg" alt="Well Next Door" aria-hidden="true">
+  <!-- Band-Foto als Vollbild-Hintergrund (quer = Desktop, hoch = Mobil) -->
+  <picture>
+    <source media="(max-width: 767px)" srcset="assets/band-mobile.jpg">
+    <img class="home-bg" src="assets/band.jpg" alt="Well Next Door" aria-hidden="true">
+  </picture>
 
   <div class="wrapper">
 
