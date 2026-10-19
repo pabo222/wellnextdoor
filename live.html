@@ -125,7 +125,9 @@
   <!-- Band-Foto als Vollbild-Hintergrund (quer = Desktop, hoch = Mobil) -->
   <picture>
     <source media="(max-width: 767px)" srcset="assets/band-mobile.jpg">
-    <img class="home-bg" src="assets/band.jpg" alt="Well Next Door" aria-hidden="true">
+    <img class="home-bg" src="assets/band.jpg"
+      srcset="assets/band.jpg 2560w, assets/band-xl.jpg 3840w" sizes="100vw"
+      alt="Well Next Door" aria-hidden="true">
   </picture>
 
   <div class="wrapper">
