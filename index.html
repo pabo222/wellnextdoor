@@ -10,6 +10,12 @@
   <meta name="author" content="Well Next Door">
   <meta name="keywords" content="Well Next Door, Indie Pop, Indie Rock, Band, Bamberg, Nürnberg, Franken, Live, Konzerte, Musik">
 
+  <!-- Geo / lokale SEO -->
+  <meta name="geo.region" content="DE-BY">
+  <meta name="geo.placename" content="Bamberg, Nürnberg">
+  <meta name="geo.position" content="49.8988;10.9028">
+  <meta name="ICBM" content="49.8988, 10.9028">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Well Next Door">
@@ -17,16 +23,18 @@
   <meta property="og:url" content="https://wellnextdoor.de/">
   <meta property="og:title" content="Well Next Door – Indie Pop aus Franken">
   <meta property="og:description" content="Indie-Pop-Rock-Band aus Bamberg &amp; Nürnberg – neue Musik, Live-Konzerte und das kommende Debütalbum. Folge uns auf Spotify, Instagram &amp; TikTok.">
-  <meta property="og:image" content="https://wellnextdoor.de/assets/opengraph.png">
+  <meta property="og:image" content="https://wellnextdoor.de/assets/og-band.jpg">
+  <meta property="og:image:secure_url" content="https://wellnextdoor.de/assets/og-band.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Well Next Door">
+  <meta property="og:image:alt" content="Well Next Door – Indie-Pop-Rock-Band aus Bamberg und Nürnberg">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Well Next Door – Indie Pop aus Franken">
   <meta name="twitter:description" content="Indie-Pop-Rock-Band aus Bamberg &amp; Nürnberg – neue Musik, Live-Konzerte und mehr.">
-  <meta name="twitter:image" content="https://wellnextdoor.de/assets/opengraph.png">
+  <meta name="twitter:image" content="https://wellnextdoor.de/assets/og-band.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,9 +70,16 @@
         "name": "Well Next Door",
         "url": "https://wellnextdoor.de/",
         "genre": ["Indie Pop", "Indie Rock"],
-        "description": "Indie-Pop-Rock-Band aus Bamberg und Nürnberg in Franken.",
-        "foundingLocation": { "@type": "Place", "name": "Bamberg, Deutschland" },
-        "image": "https://wellnextdoor.de/assets/opengraph.png",
+        "description": "Well Next Door ist eine Indie-Pop-Rock-Band aus Bamberg und Nürnberg in Franken (Bayern, Deutschland). Eingängige Melodien, treibende Gitarren und mitreißende Live-Konzerte.",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Bamberg",
+          "address": { "@type": "PostalAddress", "addressLocality": "Bamberg", "addressRegion": "Bayern", "addressCountry": "DE" }
+        },
+        "areaServed": ["Bamberg", "Nürnberg", "Franken", "Bayern", "Deutschland"],
+        "knowsLanguage": "de",
+        "keywords": "Indie Pop, Indie Rock, Band, Bamberg, Nürnberg, Franken, Live, Konzerte",
+        "image": "https://wellnextdoor.de/assets/og-band.jpg",
         "logo": "https://wellnextdoor.de/assets/icon-512.png",
         "sameAs": [
           "https://www.instagram.com/well_next_door/",
