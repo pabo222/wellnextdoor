@@ -145,6 +145,7 @@ h3 {
 .link {
   color: #fff;
   letter-spacing: 1px;
+  font-size: 1.1rem;
   padding: 1.5rem 1rem;
   text-decoration: none;
   transition: opacity .2s;
@@ -474,8 +475,8 @@ h3 {
 .link-footer {
   color: #fff;
   font-family: var(--font-copy);
-  font-size: .875rem;
-  line-height: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
   text-decoration: underline;
 }
 
@@ -516,8 +517,8 @@ h3 {
   border-top: 1px solid #fff;
   padding: 1rem 0;
   font-family: "Libertinus Serif", serif;
-  font-size: .875rem;
-  line-height: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* ---------- Rechtsseiten (Datenschutz / Nutzungsbedingungen) ---------- */
