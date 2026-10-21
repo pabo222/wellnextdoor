@@ -281,7 +281,7 @@ h3 {
   align-items: center;
   gap: 1.5rem;
   padding: 1.4rem .7rem;
-  border-radius: 6px;
+  border-radius: 0;
   transition: background .2s;
 }
 
@@ -341,7 +341,7 @@ h3 {
   background: transparent;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, .5);
-  border-radius: 2px;
+  border-radius: 0;
   padding: .45rem .8rem;
   white-space: nowrap;
   transition: background .2s, color .2s, border-color .2s;
@@ -774,7 +774,7 @@ body.home-photo {
 /* Terminliste als helles Panel über dem Foto */
 .home-photo .events-wrap {
   background: rgba(255, 255, 255, .93);
-  border-radius: 10px;
+  border-radius: 0;
   padding: 1.1rem 1.4rem 1.4rem;
 }
 
