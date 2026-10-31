@@ -809,9 +809,15 @@ body.home-photo {
   font-family: var(--font-copy);
 }
 
-/* Navigation + Footer behalten Libertinus Serif */
+/* Display-Titel (Startseite + Live) und Navigation: Geist */
+.heading,
+.heading-6,
 .link,
-.text-span,
+.text-span {
+  font-family: var(--font-copy);
+}
+
+/* Footer behält Libertinus Serif */
 .link-footer,
 .footer-copyright-center {
   font-family: "Libertinus Serif", serif;
